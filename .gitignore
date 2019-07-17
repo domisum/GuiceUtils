@@ -1,0 +1,15 @@
+*.classpath
+*.project
+*.iml
+*.log
+*.jsonLog
+.directory
+
+.settings/
+.idea/
+target/
+
+*.config.json
+*.promPlayer.json
+
+*___*.java
