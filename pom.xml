@@ -5,11 +5,10 @@
 	<groupId>de.domisum</groupId>
 	<artifactId>GuiceUtils</artifactId>
 	<version>1.0.0</version>
-
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.compiler.source>1.8</maven.compiler.source>
-		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven.compiler.source>11</maven.compiler.source>
+		<maven.compiler.target>11</maven.compiler.target>
 	</properties>
 
 	<dependencies>
@@ -25,26 +24,18 @@
 			<version>4.2.2</version>
 		</dependency>
 
-		<dependency> <!-- replace boilerplate code with simple annotations -->
+		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<version>1.16.12</version>
+			<version>1.18.10</version>
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>
 
 	<distributionManagement>
 		<repository>
-			<id>domisum-de</id>
-			<name>domisum-de-releases-public</name>
-			<url>http://domisum.de:8081/nexus/content/repositories/releases-public/</url>
+			<id>repo-domisum-io</id>
+			<url>https://repo.domisum.io/repository/mvn-public/</url>
 		</repository>
-
-		<snapshotRepository>
-			<id>domisum-de</id>
-			<name>domisum-de-releases-public</name>
-			<url>http://domisum.de:8081/nexus/content/repositories/snapshots-public/</url>
-		</snapshotRepository>
 	</distributionManagement>
-
 </project>
