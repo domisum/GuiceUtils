@@ -1,4 +1,4 @@
-package de.domisum.guiceutils;
+package io.domisum.lib.guiceutils;
 
 import com.google.inject.Binder;
 import com.google.inject.TypeLiteral;
