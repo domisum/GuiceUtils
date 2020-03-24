@@ -3,7 +3,7 @@ package io.domisum.lib.guiceutils;
 import com.google.inject.Binder;
 import com.google.inject.TypeLiteral;
 import com.google.inject.multibindings.Multibinder;
-import io.domisum.lib.auxiliumlib.util.PHR;
+import io.domisum.lib.auxiliumlib.PHR;
 import io.domisum.lib.auxiliumlib.util.java.ClassUtil;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
