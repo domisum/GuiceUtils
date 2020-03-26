@@ -15,6 +15,7 @@ import java.util.Collection;
 public final class GuiceMultibinder
 {
 	
+	// CLASSES
 	@API
 	@SafeVarargs
 	public static <T> void multibind(Binder binder, Class<T> parent, Class<? extends T>... children)
@@ -37,6 +38,17 @@ public final class GuiceMultibinder
 		var setBinder = Multibinder.newSetBinder(binder, parent);
 		for(var child : children)
 			setBinder.addBinding().to(child);
+	}
+	
+	
+	// INSTANCES
+	@API
+	@SafeVarargs
+	public static <T, C extends T> void multibindInstances(Binder binder, Class<T> parent, C... children)
+	{
+		var setBinder = Multibinder.newSetBinder(binder, parent);
+		for(var child : children)
+			setBinder.addBinding().toInstance(child);
 	}
 	
 }
