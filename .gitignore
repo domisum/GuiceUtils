@@ -1,15 +1,11 @@
-*.classpath
-*.project
-*.iml
-*.log
-*.jsonLog
-.directory
+*
 
-.settings/
-.idea/
-target/
+# ignore everything except:
+!/src
+!/.gitignore
+!/pom.xml
+!/LICENSE*
+!/README*
 
-*.config.json
-*.promPlayer.json
-
-*___*.java
+# but still ignore prototype test classes:
+___*.java
