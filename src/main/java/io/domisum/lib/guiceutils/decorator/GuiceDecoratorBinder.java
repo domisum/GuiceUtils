@@ -10,6 +10,9 @@ import lombok.NoArgsConstructor;
 public final class GuiceDecoratorBinder
 {
 	
+	/*
+	Wrapping decorator class first, then contained classes.
+	 */
 	@API
 	@SafeVarargs
 	public static <T> void bindDecoratorChain(Binder binder, Class<T> base, Class<? extends T>... implementingClasses)
