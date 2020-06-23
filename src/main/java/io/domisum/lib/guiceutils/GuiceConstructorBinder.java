@@ -14,12 +14,6 @@ public final class GuiceConstructorBinder
 {
 	
 	@API
-	public static <I> void bindToOnlyOwn(Binder binder, Class<I> implementingClass)
-	{
-		bindToOnly(binder, implementingClass, implementingClass);
-	}
-	
-	@API
 	public static <A, I extends A> void bindToOnly(Binder binder, Class<A> abstractClass, Class<I> implementingClass)
 	{
 		@SuppressWarnings("unchecked")
