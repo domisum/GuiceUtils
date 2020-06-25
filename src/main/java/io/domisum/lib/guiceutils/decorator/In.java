@@ -10,7 +10,7 @@ import java.lang.annotation.Target;
 @BindingAnnotation
 @Target({ElementType.FIELD, ElementType.PARAMETER, ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
-public @interface SelfClass
+public @interface In
 {
 	
 	Class<?> value();

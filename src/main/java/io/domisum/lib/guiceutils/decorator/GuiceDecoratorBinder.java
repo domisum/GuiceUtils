@@ -22,7 +22,7 @@ public final class GuiceDecoratorBinder
 		{
 			var bindingBuilder = binder.bind(base);
 			if(previous != null)
-				bindingBuilder.annotatedWith(BindForClass.of(previous));
+				bindingBuilder.annotatedWith(DependencyInClass.of(previous));
 			bindingBuilder.to(implClass);
 			
 			previous = implClass;

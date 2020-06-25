@@ -7,18 +7,18 @@ import lombok.RequiredArgsConstructor;
 import java.lang.annotation.Annotation;
 
 @RequiredArgsConstructor(access = AccessLevel.PRIVATE)
-public final class BindForClass
-		implements SelfClass
+public final class DependencyInClass
+		implements In
 {
 	
 	private final Class<?> value;
 	
 	
 	// INIT
-	public static SelfClass of(Class<?> clazz)
+	public static In of(Class<?> clazz)
 	{
 		ValidationUtil.notNull(clazz, "clazz");
-		return new BindForClass(clazz);
+		return new DependencyInClass(clazz);
 	}
 	
 	
@@ -26,16 +26,16 @@ public final class BindForClass
 	@Override
 	public String toString()
 	{
-		return "@"+SelfClass.class.getName()+"(value="+value+")";
+		return "@"+In.class.getName()+"(value="+value+")";
 	}
 	
 	@Override
 	public boolean equals(Object o)
 	{
-		if(!(o instanceof SelfClass))
+		if(!(o instanceof In))
 			return false;
 		
-		var other = (SelfClass) o;
+		var other = (In) o;
 		return value.equals(other.value());
 	}
 	
@@ -57,7 +57,7 @@ public final class BindForClass
 	@Override
 	public Class<? extends Annotation> annotationType()
 	{
-		return SelfClass.class;
+		return In.class;
 	}
 	
 }
