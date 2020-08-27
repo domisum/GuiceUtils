@@ -11,7 +11,7 @@ public final class GuiceDecoratorBinder
 {
 	
 	/*
-	Wrapping decorator class first, then contained classes.
+		Wrapping decorator class first, then contained backing source, then backing source of backing source, etc...
 	 */
 	@API
 	@SafeVarargs
