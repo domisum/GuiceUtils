@@ -8,7 +8,7 @@ import java.lang.annotation.Annotation;
 
 @RequiredArgsConstructor(access = AccessLevel.PRIVATE)
 public final class DependencyInClass
-		implements In
+	implements In
 {
 	
 	private final Class<?> value;
