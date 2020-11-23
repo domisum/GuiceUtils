@@ -5,17 +5,21 @@ import io.domisum.lib.auxiliumlib.annotations.API;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 
+import java.util.Arrays;
+
 @API
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public final class GuiceDecoratorBinder
 {
 	
-	/*
-		Wrapping decorator class first, then contained backing source, then backing source of backing source, etc...
+	/**
+	 * Wrapping decorator class first,
+	 * then contained backing source,
+	 * then backing source of backing source, etc...
 	 */
 	@API
-	@SafeVarargs
-	public static <T> void bindDecoratorChain(Binder binder, Class<T> base, Class<? extends T>... implementingClasses)
+	public static <T> void bindDecoratorChain(
+		Binder binder, Class<T> base, Iterable<Class<? extends T>> implementingClasses)
 	{
 		Class<? extends T> previous = null;
 		for(var implClass : implementingClasses)
@@ -27,6 +31,14 @@ public final class GuiceDecoratorBinder
 			
 			previous = implClass;
 		}
+	}
+	
+	@API
+	@SafeVarargs
+	public static <T> void bindDecoratorChain(
+		Binder binder, Class<T> base, Class<? extends T>... implementingClasses)
+	{
+		bindDecoratorChain(binder, base, Arrays.asList(implementingClasses));
 	}
 	
 }
