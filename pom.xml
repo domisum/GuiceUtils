@@ -33,16 +33,16 @@
 			<artifactId>guice</artifactId>
 			<version>4.2.3</version>
 		</dependency>
-		<dependency>
+		<dependency> <!-- https://mvnrepository.com/artifact/com.google.inject.extensions/guice-assistedinject -->
 			<groupId>com.google.inject.extensions</groupId>
 			<artifactId>guice-assistedinject</artifactId>
 			<version>4.2.3</version>
 		</dependency>
 
-		<dependency>
+		<dependency> <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<version>1.18.12</version>
+			<version>1.18.16</version>
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>
