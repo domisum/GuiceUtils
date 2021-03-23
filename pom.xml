@@ -31,12 +31,12 @@
 		<dependency> <!-- https://mvnrepository.com/artifact/com.google.inject/guice -->
 			<groupId>com.google.inject</groupId>
 			<artifactId>guice</artifactId>
-			<version>4.2.3</version>
+			<version>5.0.1</version>
 		</dependency>
 		<dependency> <!-- https://mvnrepository.com/artifact/com.google.inject.extensions/guice-assistedinject -->
 			<groupId>com.google.inject.extensions</groupId>
 			<artifactId>guice-assistedinject</artifactId>
-			<version>4.2.3</version>
+			<version>5.0.1</version>
 		</dependency>
 
 		<dependency> <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
